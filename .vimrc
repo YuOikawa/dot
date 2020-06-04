@@ -1,22 +1,12 @@
-"*****************************************************************************
-"" Vim-PLug core
-"*****************************************************************************
-
-"起動時のみ実行したい部分をかく
 if has('vim_starting')
-  "vi互換の動作を無効にするコマンド
   set nocompatible               " Be iMproved
 endif
 
-"vim-plugが存在するか確認するための変数
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
-"g:global変数 vimbootstrapの指定した言語を格納
 let g:vim_bootstrap_langs = "c,go,html,javascript,php,ruby"
-"vim or nvim
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
-"vim-plugが存在しない場合vim-plugをインストールさせる
 if !filereadable(vimplug_exists)
   if !executable("curl")
     echoerr "You have to install curl or first install vim-plug yourself!"
@@ -30,7 +20,6 @@ if !filereadable(vimplug_exists)
   autocmd VimEnter * PlugInstall
 endif
 
-"ここからvim-plugが呼び出される設定
 " Required:
 call plug#begin(expand('~/.vim/plugged'))
 
@@ -55,8 +44,6 @@ Plug 'avelino/vim-bootstrap-updater'
 Plug 'sheerun/vim-polyglot'
 Plug 'cocopon/iceberg.vim'
 
-"isdirectory ディレクトリが存在するかどうか
-"どこのディレクトリに設置するか決める
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 else

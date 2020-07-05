@@ -7,7 +7,7 @@ export PATH=$PATH:$GOPATH/bin
 
 alias vi="vim"
 
-PS1="  %# "
+PS1=" name here %# "
 
 RPROMPT=%~
 HISTFILE=~/.zsh_history

@@ -140,6 +140,7 @@ set binary
 set ttyfast
 set virtualedit=onemore
 set whichwrap=b,s,h,l,<,>,[,],~ 
+set bg=dark
 
 "" Fix backspace indent
 set backspace=indent,eol,start

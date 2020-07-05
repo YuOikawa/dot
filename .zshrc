@@ -7,7 +7,7 @@ export PATH=$PATH:$GOPATH/bin
 
 alias vi="vim"
 
-PS1=" go %# "
+PS1="  %# "
 
 RPROMPT=%~
 HISTFILE=~/.zsh_history
@@ -18,3 +18,5 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_NO_STORE
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+alias ghqcd='cd /home/vagrant/ghq/"$(ghq list | fzf)"'

@@ -134,9 +134,9 @@ filetype plugin indent on
 "" Encoding
 set encoding=utf-8
 set fileencoding=utf-8
-set fileencodings=utf-8
+set fileencodings=utf-8,euc-jp,sjis,latin1
 set bomb
-set binary
+
 set ttyfast
 set virtualedit=onemore
 set whichwrap=b,s,h,l,<,>,[,],~ 
